@@ -1,0 +1,1 @@
+<a {{ $attributes }} class="bg-red-400">{{ $slot }}</a>
