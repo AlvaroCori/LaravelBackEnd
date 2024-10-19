@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\UserApp;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,4 +13,9 @@ Route::get('about/', function () {
 
 Route::get('contact/', function () {
     return view('contact');
+});
+
+Route::get('users_app/', function () {
+    $job = UserApp::all();
+    return $job;
 });
