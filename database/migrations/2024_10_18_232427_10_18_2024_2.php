@@ -23,7 +23,7 @@ return new class extends Migration
             $table->bigIncrements("id");
             $table->string("name");
             $table->string("brand");
-            $table->integer("price");
+            $table->double("price");
             $table->integer("code");
             $table->rememberToken();
             $table->timestamps();
