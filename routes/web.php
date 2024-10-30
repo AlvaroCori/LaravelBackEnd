@@ -2,8 +2,13 @@
 
 use App\Http\Controllers\UserAppController;
 use App\Models\UserApp;
+use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Route;
 use PharIo\Manifest\Email;
+
+Route::get("test", function () {
+    Mail::to("bacs200018@gmail.com")->send(Mailable::class("Hello"));
+});
 
 Route::get('/', function () {
     return view('welcome');
